@@ -1,0 +1,30 @@
+[
+  {
+    "first_name": "Adam",
+    "last_name": "Johnson",
+    "full_name": "Adam Johnson",
+    "phone_number": "0938476383",
+    "city_and_state": "US"
+  },
+  {
+    "first_name": "Emily",
+    "last_name": "Wilson",
+    "full_name": "Emily Wilson",
+    "phone_number": "0661384893",
+    "city_and_state": "CA"
+  },
+  {
+    "first_name": "David",
+    "last_name": "Thompson",
+    "full_name": "David Thompson",
+    "phone_number": "0952738388",
+    "city_and_state": "GB"
+  },
+  {
+    "first_name": "Jessica Thompson",
+    "last_name": "BCD890EFG",
+    "full_name": "Jessica thompson",
+    "phone_number": ",05037347747",
+    "city_and_state": "Lviv"
+  }
+]
