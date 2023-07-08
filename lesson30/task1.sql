@@ -1,20 +1,13 @@
-import sqlite3
-conn = sqlite3.connect('task1.db')
-conn.execute('''CREATE TABLE IF NOT EXISTS users
-                (id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT NOT NULL,
-                age INTEGER);''')
-conn.execute('''ALTER TABLE users
-                RENAME TO new_users;''')
-conn.execute('''ALTER TABLE new_users
-                ADD COLUMN email TEXT;''')
-conn.execute('''INSERT INTO new_users (name, age, email)
-                VALUES ('John Doe', 25, 'john@example.com'),
-                       ('Jane Smith', 30, 'jane@example.com');''')
-conn.execute('''UPDATE new_users
-                SET age = 26
-                WHERE name = 'John Doe';''')
-
-conn.execute('''DELETE FROM new_users
-                WHERE name = 'Jane Smith';''')
-conn.close()
+create table names (name varchar(255), id integer primary key);
+insert into names (name) values ('first line');
+insert into names (name) values ('second line');
+select name from names;
+alter table names rename to mainnames;
+select name from mainnames;
+alter table mainnames add column age;
+alter table mainnames add column id;
+select name, age from mainnames;
+insert into mainnames (name, age) values ('third line');
+select name, age from mainnames;
+update mainnames set age = 2 where id = 2;
+delete from mainnames where id = 2;
