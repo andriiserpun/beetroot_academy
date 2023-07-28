@@ -25,7 +25,7 @@ async def main():
     comments = await fetch_all_comments(subreddit)
     with open(f"{subreddit}_comments.json", "w") as file:
         json.dump(comments, file, ensure_ascii=False, indent=2)
-    print("comments loaded to file")
+    print("comments loaded to filepytho")
 
 if __name__ == "__main__":
     asyncio.run(main())

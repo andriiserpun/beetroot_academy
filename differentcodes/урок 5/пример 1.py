@@ -1,12 +1,12 @@
 # SOLUTION 1
-star_len = int(input("Введіть довжину вершини:\t"))
-i = 1
-while i < star_len:
-    print('* '*i)
-    i += 1
-while i > 0:
-    print('* '*i)
-    i -= 1
+# star_len = int(input("Введіть довжину вершини:\t"))
+# i = 1
+# while i < star_len:
+#     print('* '*i)
+#     i += 1
+# while i > 0:
+#     print('* '*i)
+#     i -= 1
 # SOLUTION 2
 # star_len = int(input("Введіть довжину вершини:\t"))
 # i = 0
