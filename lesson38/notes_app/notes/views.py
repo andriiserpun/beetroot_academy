@@ -1,5 +1,6 @@
-from django.shortcuts import render
+
+
 from django.http import HttpResponse
 
-def hello_notes(request):
+def hello_view(request):
     return HttpResponse("Hello from Notes app.")
