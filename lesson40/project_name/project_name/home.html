@@ -1,0 +1,16 @@
+<!-- home.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная страница</title>
+</head>
+<body>
+    <h1>Заметки</h1>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note.title }} - {{ note.text }} - {{ note.reminder }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
