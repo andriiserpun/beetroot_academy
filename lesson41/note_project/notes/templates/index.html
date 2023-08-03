@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Заметки</title>
+</head>
+<body>
+    <h1>Заметки</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Название:</label>
+        <input type="text" name="title" required><br>
+
+        <label for="text">Текст:</label><br>
+        <textarea name="text" rows="5" required></textarea><br>
+
+        <label for="reminder">Напоминание:</label>
+        <input type="text" name="reminder" required><br>
+
+        <label for="category">Категория:</label>
+        <input type="text" name="category" required><br>
+
+        <button type="submit">Сохранить</button>
+    </form>
+
+    <h2>Список заметок:</h2>
+    <ul>
+        {% for note in notes %}
+        <li>
+            <strong>{{ note.title }}</strong><br>
+            {{ note.text }}<br>
+            Напоминание: {{ note.reminder }}<br>
+            Категория: {{ note.category }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

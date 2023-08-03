@@ -7,6 +7,10 @@ separator = "<SEP>"
 
 client_sockets = set()
 
+
+def filter_message(message):
+    return message
+
 def listen_message(client):
     while True:
         try:
@@ -54,4 +58,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         client_sockets.add(client_socket)
         thread = threading.Thread(target=listen_message, args=(client_socket,), daemon=True)
         thread.start()
+
 
