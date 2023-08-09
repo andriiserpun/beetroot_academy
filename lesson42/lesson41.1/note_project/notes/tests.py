@@ -18,8 +18,8 @@ class IndexViewTestCase(TestCase):
         request = self.factory.post(self.url, data)
         response = index(request)
 
-        self.assertEqual(response.status_code, 302)  # Should redirect
-        self.assertEqual(Note.objects.count(), 1)    # One note should be created
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Note.objects.count(), 1)
         note = Note.objects.first()
         self.assertEqual(note.title, 'Test Note')
         self.assertEqual(note.text, 'This is a test note.')
@@ -30,9 +30,7 @@ class IndexViewTestCase(TestCase):
         request = self.factory.get(self.url)
         response = index(request)
 
-        self.assertEqual(response.status_code, 200)  # Should return success
-
-    # Add more test cases as needed
+        self.assertEqual(response.status_code, 200)
 
 
     # Add more test cases as needed

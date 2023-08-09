@@ -1,0 +1,61 @@
+[    {
+        "id": 0,
+        "first_name": "F. Scott",
+        "last_name": "Fitzgerald",
+        "country": "US"
+    },
+    {
+        "id": 1,
+        "first_name": "F. Scott",
+        "last_name": "Fitzgerald",
+        "country": "US"
+    },
+    {
+        "id": 2,
+        "first_name": "Zelda",
+        "last_name": "Fitzgerald",
+        "country": "US"
+    },
+    {
+        "id": 3,
+        "first_name": "Harper",
+        "last_name": "Lee",
+        "country": "US"
+    },
+    {
+        "id": 4,
+        "first_name": "Taras",
+        "last_name": "Shevchenko",
+        "country": "UA"
+    },
+    {
+        "id": 5,
+        "first_name": "Ivan",
+        "last_name": "Franko",
+        "country": "UA"
+    },
+    {
+        "id": 6,
+        "first_name": "Mark",
+        "last_name": "Twain",
+        "country": "US"
+    },
+    {
+        "id": 7,
+        "first_name": "Miguel de",
+        "last_name": "Cervantes",
+        "country": "ES"
+    },
+    {
+        "id": 8,
+        "first_name": "Victor",
+        "last_name": "Hugo",
+        "country": "FR"
+    },
+    {
+        "id": 9,
+        "first_name": "Johann Wolfgang von",
+        "last_name": "Goethe",
+        "country": "DE"
+    }
+]
