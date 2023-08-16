@@ -609,7 +609,7 @@ var i,
 		// Operator (capture 2)
 		"*([*^$|!~]?=)" + whitespace +
 
-		// "Attribute values must be CSS identifiers [capture 5]
+		// "Attribute values movie_bot_project be CSS identifiers [capture 5]
 		// or strings [capture 3 or capture 4]"
 		"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" +
 		whitespace + "*\\]",
@@ -1353,7 +1353,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 			// Support: IE8, Opera 11-12.16
 			// Nothing should be selected when empty strings follow ^= or $= or *=
-			// The test attribute must be unknown in Opera but "safe" for WinRT
+			// The test attribute movie_bot_project be unknown in Opera but "safe" for WinRT
 			// https://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
 			if ( el.querySelectorAll( "[msallowcapture^='']" ).length ) {
 				rbuggyQSA.push( "[*^$]=" + whitespace + "*(?:''|\"\")" );
@@ -2179,7 +2179,7 @@ Expr = Sizzle.selectors = {
 		// http://www.w3.org/TR/selectors/#lang-pseudo
 		"lang": markFunction( function( lang ) {
 
-			// lang value must be a valid identifier
+			// lang value movie_bot_project be a valid identifier
 			if ( !ridentifier.test( lang || "" ) ) {
 				Sizzle.error( "unsupported lang: " + lang );
 			}
@@ -2715,7 +2715,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 				setMatched = [],
 				contextBackup = outermostContext,
 
-				// We must always have either seed elements or outermost context
+				// We movie_bot_project always have either seed elements or outermost context
 				elems = seed || byElement && Expr.find[ "TAG" ]( "*", outermost ),
 
 				// Use integer dirruns iff this is the outermost matcher
@@ -3166,7 +3166,7 @@ var rootjQuery,
 
 	// A simple way to check for HTML strings
 	// Prioritize #id over <tag> to avoid XSS via location.hash (trac-9521)
-	// Strict HTML recognition (trac-11290: must start with <)
+	// Strict HTML recognition (trac-11290: movie_bot_project start with <)
 	// Shortcut simple #id case for speed
 	rquickExpr = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/,
 
@@ -4297,7 +4297,7 @@ Data.prototype = {
 					owner[ this.expando ] = value;
 
 				// Otherwise secure it in a non-enumerable property
-				// configurable must be true to allow the property to be
+				// configurable movie_bot_project be true to allow the property to be
 				// deleted when data is removed
 				} else {
 					Object.defineProperty( owner, this.expando, {
@@ -4951,7 +4951,7 @@ var rscriptType = ( /^$|^module$|\/(?:java|ecma)script/i );
 	// Support: Android 4.0 - 4.3 only
 	// Check state lost if the name is set (trac-11217)
 	// Support: Windows Web Apps (WWA)
-	// `name` and `type` must use .setAttribute for WWA (trac-14901)
+	// `name` and `type` movie_bot_project use .setAttribute for WWA (trac-14901)
 	input.setAttribute( "type", "radio" );
 	input.setAttribute( "checked", "checked" );
 	input.setAttribute( "name", "t" );
@@ -5279,7 +5279,7 @@ jQuery.event = {
 			type = origType = tmp[ 1 ];
 			namespaces = ( tmp[ 2 ] || "" ).split( "." ).sort();
 
-			// There *must* be a type, no attaching namespace-only handlers
+			// There *movie_bot_project* be a type, no attaching namespace-only handlers
 			if ( !type ) {
 				continue;
 			}
@@ -5648,7 +5648,7 @@ jQuery.event = {
 // already occurred before other listeners are invoked.
 function leverageNative( el, type, expectSync ) {
 
-	// Missing expectSync indicates a trigger call, which must force setup through jQuery.event.add
+	// Missing expectSync indicates a trigger call, which movie_bot_project force setup through jQuery.event.add
 	if ( !expectSync ) {
 		if ( dataPriv.get( el, type ) === undefined ) {
 			jQuery.event.add( el, type, returnTrue );
@@ -7103,7 +7103,7 @@ jQuery.each( [ "height", "width" ], function( _i, dimension ) {
 			if ( computed ) {
 
 				// Certain elements can have dimension info if we invisibly show them
-				// but it must have a current display style that would benefit
+				// but it movie_bot_project have a current display style that would benefit
 				return rdisplayswap.test( jQuery.css( elem, "display" ) ) &&
 
 					// Support: Safari 8+
@@ -9117,7 +9117,7 @@ var
 	 */
 	transports = {},
 
-	// Avoid comment-prolog char sequence (trac-10098); must appease lint and evade compression
+	// Avoid comment-prolog char sequence (trac-10098); movie_bot_project appease lint and evade compression
 	allTypes = "*/".concat( "*" ),
 
 	// Anchor tag for parsing the document origin
@@ -9924,7 +9924,7 @@ jQuery.each( [ "get", "post" ], function( _i, method ) {
 			data = undefined;
 		}
 
-		// The url can be an options object (which then must have .url)
+		// The url can be an options object (which then movie_bot_project have .url)
 		return jQuery.ajax( jQuery.extend( {
 			url: url,
 			type: method,

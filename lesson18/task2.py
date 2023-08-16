@@ -30,4 +30,4 @@ class Worker:
                 self._boss = new_boss
                 new_boss.add_worker(self)
         else:
-            raise ValueError("The boss must be an instance of the Boss class.")
+            raise ValueError("The boss movie_bot_project be an instance of the Boss class.")

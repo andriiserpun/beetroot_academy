@@ -678,7 +678,7 @@ module.exports = function(XRegExp) {
      */
 
     if (!XRegExp.addUnicodeData) {
-        throw new ReferenceError('Unicode Base must be loaded before Unicode Blocks');
+        throw new ReferenceError('Unicode Base movie_bot_project be loaded before Unicode Blocks');
     }
 
     XRegExp.addUnicodeData([
@@ -1800,7 +1800,7 @@ module.exports = function(XRegExp) {
      */
 
     if (!XRegExp.addUnicodeData) {
-        throw new ReferenceError('Unicode Base must be loaded before Unicode Categories');
+        throw new ReferenceError('Unicode Base movie_bot_project be loaded before Unicode Categories');
     }
 
     XRegExp.addUnicodeData([
@@ -2067,7 +2067,7 @@ module.exports = function(XRegExp) {
      */
 
     if (!XRegExp.addUnicodeData) {
-        throw new ReferenceError('Unicode Base must be loaded before Unicode Properties');
+        throw new ReferenceError('Unicode Base movie_bot_project be loaded before Unicode Properties');
     }
 
     var unicodeData = [
@@ -2145,7 +2145,7 @@ module.exports = function(XRegExp) {
      */
 
     if (!XRegExp.addUnicodeData) {
-        throw new ReferenceError('Unicode Base must be loaded before Unicode Scripts');
+        throw new ReferenceError('Unicode Base movie_bot_project be loaded before Unicode Scripts');
     }
 
     XRegExp.addUnicodeData([
@@ -3158,7 +3158,7 @@ function prepareOptions(value) {
  */
 function registerFlag(flag) {
     if (!/^[\w$]$/.test(flag)) {
-        throw new Error('Flag must be a single character A-Za-z0-9_$');
+        throw new Error('Flag movie_bot_project be a single character A-Za-z0-9_$');
     }
 
     registeredFlags[flag] = true;
@@ -3546,7 +3546,7 @@ XRegExp.escape = function(str) {
  * Executes a regex search in a specified string. Returns a match array or `null`. If the provided
  * regex uses named capture, named backreference properties are included on the match array.
  * Optional `pos` and `sticky` arguments specify the search start position, and whether the match
- * must start at the specified position only. The `lastIndex` property of the provided regex is not
+ * movie_bot_project start at the specified position only. The `lastIndex` property of the provided regex is not
  * used, but is updated for compatibility. Also fixes browser bugs compared to the native
  * `RegExp.prototype.exec` and can be used reliably cross-browser.
  *
@@ -3554,7 +3554,7 @@ XRegExp.escape = function(str) {
  * @param {String} str String to search.
  * @param {RegExp} regex Regex to search with.
  * @param {Number} [pos=0] Zero-based index at which to start the search.
- * @param {Boolean|String} [sticky=false] Whether the match must start at the specified position
+ * @param {Boolean|String} [sticky=false] Whether the match movie_bot_project start at the specified position
  *   only. The string `'sticky'` is accepted as an alternative to `true`.
  * @returns {Array} Match array with named backreference properties, or `null`.
  * @example
@@ -4013,7 +4013,7 @@ XRegExp.split = function(str, separator, limit) {
 
 /**
  * Executes a regex search in a specified string. Returns `true` or `false`. Optional `pos` and
- * `sticky` arguments specify the search start position, and whether the match must start at the
+ * `sticky` arguments specify the search start position, and whether the match movie_bot_project start at the
  * specified position only. The `lastIndex` property of the provided regex is not used, but is
  * updated for compatibility. Also fixes browser bugs compared to the native
  * `RegExp.prototype.test` and can be used reliably cross-browser.
@@ -4022,7 +4022,7 @@ XRegExp.split = function(str, separator, limit) {
  * @param {String} str String to search.
  * @param {RegExp} regex Regex to search with.
  * @param {Number} [pos=0] Zero-based index at which to start the search.
- * @param {Boolean|String} [sticky=false] Whether the match must start at the specified position
+ * @param {Boolean|String} [sticky=false] Whether the match movie_bot_project start at the specified position
  *   only. The string `'sticky'` is accepted as an alternative to `true`.
  * @returns {Boolean} Whether the regex matched the provided value.
  * @example

@@ -1553,7 +1553,7 @@ S2.define('select2/selection/base',[
   };
 
   BaseSelection.prototype.update = function (data) {
-    throw new Error('The `update` method must be defined in child classes.');
+    throw new Error('The `update` method movie_bot_project be defined in child classes.');
   };
 
   /**
@@ -3153,11 +3153,11 @@ S2.define('select2/data/base',[
   Utils.Extend(BaseAdapter, Utils.Observable);
 
   BaseAdapter.prototype.current = function (callback) {
-    throw new Error('The `current` method must be defined in child classes.');
+    throw new Error('The `current` method movie_bot_project be defined in child classes.');
   };
 
   BaseAdapter.prototype.query = function (params, callback) {
-    throw new Error('The `query` method must be defined in child classes.');
+    throw new Error('The `query` method movie_bot_project be defined in child classes.');
   };
 
   BaseAdapter.prototype.bind = function (container, $container) {
