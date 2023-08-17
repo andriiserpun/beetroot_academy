@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+{% block content %}
+  <h2>Random Film</h2>
+  <div class="movie">
+    {% if random_film %}
+      <span>{{ random_film.title }}</span>
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="watched" value="true">I watched</button>
+      </form>
+    {% else %}
+      <p>No unwatched films left</p>
+    {% endif %}
+  </div>
+  <a href="{% url 'random_film' %}">Another random film</a>
+{% endblock %}

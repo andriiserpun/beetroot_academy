@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Movie App{% endblock %}</title>
+</head>
+<body>
+    <div>
+        <h1>Главное меню</h1>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'movie_list' %}">Movie List</a></li>
+            <li><a href="{% url 'add_comment' %}">Add Comment</a></li>
+            <li><a href="{% url 'random_film' %}">Random Film</a></li>
+        </ul>
+    </div>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

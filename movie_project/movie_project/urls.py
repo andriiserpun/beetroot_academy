@@ -23,4 +23,5 @@ urlpatterns = [
     path('add_comment/', views.add_comment, name='add_comment'),
     path('movie_list/', views.movie_list, name='movie_list'),
     path('admin/', admin.site.urls),
+    path('random_film/', views.random_film, name='random_film'),
 ]
