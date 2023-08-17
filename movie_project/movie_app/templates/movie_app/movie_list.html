@@ -1,20 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
+<head>
+    <title>Movie List</title>
+</head>
 <body>
-    <h1>Movie list</h1>
-    <form method="post">
-        {% csrf_token %}
-        <table>
-            {% for movie in movies %}
-                <tr>
-                    <td>{{ movie.title }}</td>
-                    <td>{% if movie.viewed %}<input type="checkbox" name="watched" value="{{ movie.id }}">{% endif %}</td>
-                </tr>
-            {% endfor %}
-        </table>
-        <button type="submit">Отметить, как не просмотренные</button>
-    </form>
+<form method="post">
+    <h1>Movie List</h1>
+    {% csrf_token %}
+    <ul>
+        {% for movie in movies %}
+            <li>
+                {{ movie.title }}
+                {% if movie.viewed %}
+                    <input type="checkbox" name="watched-{{ movie.id }}" value="{{ movie.id }}" checked disabled>
+                {% else %}
+                    <input type="checkbox" name="watched-{{ movie.id }}" value="{{ movie.id }}">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <button type="submit">Save</button>
+</form>
 </body>
 {% endblock %}
-
-
