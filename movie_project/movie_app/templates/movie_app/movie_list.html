@@ -1,25 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-<head>
-    <title>Movie List</title>
-</head>
-<body>
-<form method="post">
     <h1>Movie List</h1>
-    {% csrf_token %}
-    <ul>
-        {% for movie in movies %}
-            <li>
-                {{ movie.title }}
-                {% if movie.viewed %}
-                    <input type="checkbox" name="watched-{{ movie.id }}" value="{{ movie.id }}" checked disabled>
-                {% else %}
-                    <input type="checkbox" name="watched-{{ movie.id }}" value="{{ movie.id }}">
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
-    <button type="submit">Save</button>
-</form>
-</body>
+    <form method="get">
+        <label for="year">Filter by Year:</label>
+        <input type="text" id="year" name="year" value="{{ year_filter }}">
+        <label for="country">Filter by Country:</label>
+        <input type="text" id="country" name="country" value="{{ country_filter }}">
+        <label for="user_first_name">Filter by Username:</label>
+        <input type="text" id="user_first_name" name="user_first_name" value="{{ user_first_name_filter }}"><br><br>
+        <button type="submit">Apply Filters</button>
+    </form>
+    {% if movies %}
+        <form method="post">
+            {% csrf_token %}
+            <ul>
+                {% for movie in movies %}
+                    <li>
+                        <tr>
+                            <td>{{ movie.title }}</td>
+                            <td><input type="checkbox" name="watched-{{ movie.id }}" value="{{ movie.id }}" {% if movie.viewed %}disabled{% endif %}></td>
+                        </tr>
+                    </li>
+                {% endfor %}
+            </ul>
+        </form>
+    {% else %}
+        <p>No movies found for the selected year or country.</p>
+    {% endif %}
 {% endblock %}

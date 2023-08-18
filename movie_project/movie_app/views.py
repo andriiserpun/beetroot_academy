@@ -6,6 +6,7 @@ from django.http import HttpResponse
 import random
 from random import choice
 from .forms import RandomFilmForm
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, 'movie_app/home.html')
@@ -33,21 +34,34 @@ def add_comment(request):
         form = MovieForm()
     return render(request, 'movie_app/add_comment.html', {'form': form})
 
-
+@login_required
 def movie_list(request):
-    if request.method == 'POST':
-        for key in request.POST:
-            if key.startswith('watched'):
-                movie_id = key.split('-')[-1]
-                movie = Movie.objects.get(pk=movie_id)
-                movie.viewed = True
-                movie.save()
-        return redirect('movie_list')
+    year_filter = request.GET.get('year')
+    country_filter = request.GET.get('country')
+    user_first_name_filter = request.GET.get('user_first_name')
 
     movies = Movie.objects.all()
-    context = {'movies': movies}
-    return render(request, 'movie_app/movie_list.html', context)
 
+    if year_filter and year_filter != 'None':
+        try:
+            year_filter = int(year_filter)
+            movies = movies.filter(year=year_filter)
+        except ValueError:
+            pass
+
+    if country_filter and country_filter != 'None':
+        movies = movies.filter(country=country_filter)
+
+    if user_first_name_filter and user_first_name_filter != 'None':
+        movies = movies.filter(user_first_name=user_first_name_filter)
+
+    context = {
+        'movies': movies,
+        'year_filter': year_filter,
+        'country_filter': country_filter,
+        'user_first_name_filter': user_first_name_filter,
+    }
+    return render(request, 'movie_app/movie_list.html', context)
 
 
 # Create your views here.
