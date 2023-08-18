@@ -24,11 +24,9 @@ def export_movies_to_json(file_path):
             'title': movie.title,
             'year': movie.year,
             'country': movie.country,
-            # Добавьте другие поля модели фильма, если есть
         }
         movies_data.append(movie_data)
 
-    # Запишите данные в JSON файл с указанием ensure_ascii=False
     with open(file_path, 'w', encoding='utf-8') as json_file:
         json.dump(movies_data, json_file, indent=4, ensure_ascii=False)
 
