@@ -84,13 +84,6 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',  # Бэкенд на основе базы данных
-    'your_app.backends.AllowAllUsersModelBackend',  # Пример бэкенда на основе email
-    # Дополнительные бэкенды, если необходимо
-]
-
-LOGIN_URL = 'login/'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
