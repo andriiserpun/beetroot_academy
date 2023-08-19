@@ -11,7 +11,11 @@
   <h2>Random Film</h2>
   <div class="movie">
     {% if random_film %}
-      <span>{{ random_film.title }}</span>
+        <p>User: {{ random_film.user_first_name }}</p>
+        <p>Title: {{ random_film.title }}</p>
+        <p>Year: {{ random_film.year }}</p>
+        <p>Country: {{ random_film.country }}</p>
+        <p>Comment: {{ random_film.comment }}</p>
       <form method="post">
         {% csrf_token %}
         <button type="submit" name="watched" value="true">I watched</button>
