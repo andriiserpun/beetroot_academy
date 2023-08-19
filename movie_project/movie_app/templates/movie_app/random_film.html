@@ -1,6 +1,13 @@
-
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
+
+
+<head>
+    <link rel="icon" type="image/x-icon" href="{% static 'movie_app/filmsee.ico' %}">
+    <link rel="stylesheet" href="{% static 'movie_app/comment.css' %}">
+</head>
+<body>
   <h2>Random Film</h2>
   <div class="movie">
     {% if random_film %}
@@ -14,4 +21,8 @@
     {% endif %}
   </div>
   <a href="{% url 'random_film' %}">Another random film</a>
+    <div class="image-bred">
+        <img src="{% static 'movie_app/bredp.png' %}" alt="Image">
+    </div>
+</body>
 {% endblock %}

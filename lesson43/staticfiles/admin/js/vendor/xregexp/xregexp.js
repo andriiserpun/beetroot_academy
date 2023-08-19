@@ -2954,7 +2954,7 @@ function dec(hex) {
 
 /**
  * Returns a pattern that can be used in a native RegExp in place of an ignorable token such as an
- * inline comment or whitespace with flag x. This is used directly as a token handler function
+ * inline comment.css or whitespace with flag x. This is used directly as a token handler function
  * passed to `XRegExp.addToken`.
  *
  * @private

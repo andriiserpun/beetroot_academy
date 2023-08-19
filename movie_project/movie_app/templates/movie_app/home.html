@@ -1,18 +1,27 @@
-
-{% load static %}
 {% block content %}
+{% load static %}
 
 
 <html>
 <head>
-    <link rel="stylesheet" href="{% static 'movie_app/bread.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'movie_app/filmsee.ico' %}">
+    <link rel="stylesheet" href="{% static 'movie_app/comment.css' %}">
 </head>
 <body>
-    <h1>Welcome to My Movie App</h1>
-    <p class="lead">Keep track of your favorite movies and discover new ones.</p>
-    <a href="{% url 'add_comment' %}">Add Comment</a><br>
-    <a href="{% url 'movie_list' %}">Movie List</a><br>
-    <a href="{% url 'random_film' %}">Random Film</a>
+    <div>
+        <h1 class="centered-text">Welcome to My Movie App</h1>
+        <p class=lead">Keep track of your favorite movies and discover new ones.</p>
+        <a href="{% url 'add_comment' %}">Add Comment</a><br>
+        <a href="{% url 'movie_list' %}">Movie List</a><br>
+        <a href="{% url 'random_film' %}">Random Film</a>
+        <p>_____________________________________________________________________</p>
+        <p>This application was created with the aim of spending your and your friends' free time</p>
+        <p>in an interesting way, watching movies, marking watched ones, writing comments  </p>
+        <p>so that friends can see what is better not to watch </p>
+    </div>
+    <div class="image-container">
+        <img src="{% static 'movie_app/will.png' %}" alt="Image">
+    </div>
 </body>
 </html>
 {% endblock %}

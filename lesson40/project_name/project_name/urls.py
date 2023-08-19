@@ -19,5 +19,5 @@ from django.urls import include, path
 from lesson40.project_name.app_name.views import home
 
 urlpatterns = [
-    path('app_name/', include('app_name.urls'), home='home', home),
+    path('app_name/', include('app_name.urls'), home='home'),
 ]

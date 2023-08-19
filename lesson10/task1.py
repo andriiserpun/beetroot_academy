@@ -1,13 +1,19 @@
 def oops():
+    raise IndexError("Индекс вышел за границы")
+def catch_exception():
     try:
-        names = {'one': "1", 'two': '2'}
-        print(names ["three"])
-    except KeyError:
-        print("something")
+        oops()
+    except IndexError as e:
+        print(f"Поймано исключение: {e}")
+    except KeyError as e:
+        print(f"Поймано исключение KeyError: {e}")
 
+print("Пример с IndexError:")
+catch_exception()
 def oops():
-    try:
-        [1,2][3]
-    except IndexError:
-        print("something again")    # я не понимаю, почему не выводится принт
+    raise KeyError("Такого ключа не существует")
+
+print("\nПример с KeyError:")
+catch_exception()
+
 

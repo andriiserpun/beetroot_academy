@@ -1,0 +1,34 @@
+body {
+    background-color: #98FB98;
+    color: black;
+}
+
+
+.form-control {
+    background-color: #FFE4E1;
+    color: white;
+}
+
+.btn {
+    background-color: #FFE4E1;
+    color: white;
+}
+
+.image-leo {
+    flex: 1;
+    padding: 1px;
+    text-align: right;
+}
+
+.image-leo img {
+    max-width: 10%;
+    height: auto;
+}
+.image-leo img {
+    position: absolute;
+    top: 50%; /* Расположить изображение по вертикали на 50% */
+    left: 65%; /* Расположить изображение по горизонтали на 50% */
+    transform: translate(-50%, -50%); /* Центрирование по середине */
+    max-width: 18%;
+    height: auto;
+}

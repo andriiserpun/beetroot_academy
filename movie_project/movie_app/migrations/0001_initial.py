@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=100)),
                 ('year', models.PositiveIntegerField()),
                 ('country', models.CharField(max_length=50)),
-                ('comment', models.TextField()),
+                ('comment.css', models.TextField()),
             ],
         ),
     ]

@@ -1,6 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
+
+
 <head>
+    <link rel="icon" type="image/x-icon" href="{% static 'movie_app/filmsee.ico' %}">
+    <link rel="stylesheet" href="{% static 'movie_app/add_commes.css' %}">
     <title>Add Comment</title>
 </head>
 <body>
@@ -10,5 +15,8 @@
         {{ form.as_p }}
         <button type="submit">Submit</button>
     </form>
+    <div class="image-leo">
+        <img src="{% static 'movie_app/leo.png' %}" alt="Image">
+    </div>
 </body>
 {% endblock %}

@@ -18,6 +18,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SETTINGS_DIR = Path(__file__).resolve().parent
 TEMPLATE_DIR = os.path.join(SETTINGS_DIR, "templates")
 
+TELEGRAM_BOT_TOKEN = '6553723256:AAFX1vByEhelImArItiF_NXiWEYXeW9azGs'
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/

@@ -1,0 +1,34 @@
+body {
+    background-color: #98FB98;
+    color: black;
+}
+
+
+.form-control {
+    background-color: #FFE4E1;
+    color: white;
+}
+
+.btn {
+    background-color: #FFE4E1;
+    color: white;
+}
+
+.image-friends {
+    flex: 1;
+    padding: 1px;
+    text-align: right;
+}
+
+.image-friends img {
+    max-width: 10%;
+    height: auto;
+}
+.image-friends img {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    max-width: 18%;
+    height: auto;
+}

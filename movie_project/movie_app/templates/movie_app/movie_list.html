@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
+<head>
+    <link rel="icon" type="image/x-icon" href="{% static 'movie_app/filmsee.ico' %}">
+    <link rel="stylesheet" href="{% static 'movie_app/comment.css' %}">
+</head>
+<div>
     <h1>Movie List</h1>
     <form method="get">
         <label for="year">Filter by Year:</label>
@@ -25,6 +31,12 @@
             </ul>
         </form>
     {% else %}
-        <p>No movies found for the selected year or country.</p>
+        <p>No movies found</p>
     {% endif %}
+</div>
+<div class="image-friends">
+    <img src="{% static 'movie_app/frie.png' %}" alt="Image">
+</div>
 {% endblock %}
+
+

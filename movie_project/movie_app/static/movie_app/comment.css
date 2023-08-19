@@ -1,0 +1,34 @@
+body {
+    background-color: #98FB98;
+    color: black;
+}
+
+
+.form-control {
+    background-color: #FFE4E1;
+    color: white;
+}
+
+.btn {
+    background-color: #FFE4E1;
+    color: white;
+}
+
+.image-container {
+    flex: 1;
+    padding: 1px;
+    text-align: right;
+}
+
+.image-container img {
+    max-width: 25%;
+    height: auto;
+}
+.image-container img {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    max-width: 40%;
+    height: auto;
+}
