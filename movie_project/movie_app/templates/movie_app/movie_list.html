@@ -23,7 +23,7 @@
                 {% for movie in movies %}
                     <li>
                         <tr>
-                            <td>{{ movie.title }}</td>
+                            <td>{{movie.user_first_name}}{{ movie.title }}</td>
                             <td><input type="checkbox" name="watched-{{ movie.id }}" value="{{ movie.id }}" {% if movie.viewed %}disabled{% endif %}></td>
                         </tr>
                     </li>

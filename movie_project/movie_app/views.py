@@ -34,7 +34,7 @@ def add_comment(request):
         form = MovieForm()
     return render(request, 'movie_app/add_comment.html', {'form': form})
 
-@login_required
+
 def movie_list(request):
     year_filter = request.GET.get('year')
     country_filter = request.GET.get('country')
