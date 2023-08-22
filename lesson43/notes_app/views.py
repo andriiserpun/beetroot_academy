@@ -2,7 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Note
 from .forms import NoteForm
 
-
+def home(request):
+    return render(request, 'note_detail.html')
 def create_note(request):
     if request.method == 'POST':
         form = NoteForm(request.POST)

@@ -18,6 +18,7 @@ from django.urls import path
 from notes_app import views
 
 urlpatterns = [
+    path('', views.home, name='home'),
     path('create/', views.create_note, name='create_note'),
     path('note/<int:note_id>/', views.note_detail, name='note_detail'),
     path('notes/', views.note_list, name='note_list'),

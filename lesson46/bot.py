@@ -12,7 +12,7 @@ def start(update: Update, context: CallbackContext) -> None:
     update.message.reply_text('Привет! Я могу показать тебе случайный фильм.')
 
 def random_movie(update: Update, context: CallbackContext) -> None:
-    response = requests.get(f'https://kinopoisk.dev/documentation={API_KEY}')
+    response = requests.get(f'https://kinopoisk.dev/documentation?api_key={API_KEY}')
     data = response.json()
     movies = data['results']
     random_movie = random.choice(movies)
