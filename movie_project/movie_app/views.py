@@ -6,7 +6,6 @@ from django.http import HttpResponse
 import random
 from random import choice
 from .forms import RandomFilmForm
-from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, 'movie_app/home.html')
